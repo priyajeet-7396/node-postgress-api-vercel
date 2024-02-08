@@ -6,6 +6,10 @@ require('dotenv').config()
 app.use(express.json())
 
 
+app.get("/" , (req, res) => {
+    res.send('hello')
+})
+
 const bookRouter = require('./routes/book.router')
 
 app.use("/api/v1/books", bookRouter)
